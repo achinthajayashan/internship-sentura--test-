@@ -37,7 +37,10 @@ export class DefaultLayout extends Component<UserProps, UserState> {
     private onSendBtnClick = () => {
             try {
                 this.api.post('/api/users',{
-                    headers:{'Authorization': 'Bearer wys_JRbfBPfUxbigQ6s4zVFl3mpw0V82nt2jcepM'},
+
+                    headers:{'Content-Type': 'application/json', 'Authorization': 'Bearer wys_JRbfBPfUxbigQ6s4zVFl3mpw0V82nt2jcepM'
+
+                    },
                     name: this.state.name,
                     email:this.state.email,
                     phoneNumber:this.state.phoneNumber,
